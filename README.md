@@ -4,6 +4,11 @@ A Arduino library for the [DC40175](http://www.ti.com/lit/ds/symlink/cd4017b.pdf
 
 ![](examples/extended/extended-fritzing-layout.png)  
 
+based on work by Leonel Machava  
+http://codentronix.com  
+http://codentronix.com/2011/06/05/arduino-led-bar-graph-driven-by-a-4017-counter/  
+http://codentronix.com/2011/06/05/arduino-led-bar-graph-with-a-4017-counter-and-potentiometer/  
+
 ###Pin Functions CD4017B
 
 - PIN 16 - V DC
