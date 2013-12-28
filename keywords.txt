@@ -1,0 +1,10 @@
+DC40175	KEYWORD1
+clock	KEYWORD2
+increment	KEYWORD2
+setHigh	KEYWORD2
+setLow	KEYWORD2
+setHL	KEYWORD2
+inhibitClock	KEYWORD2
+resumeClock	KEYWORD2
+reset	KEYWORD2
+carryOut	KEYWORD2

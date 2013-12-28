@@ -1,3 +1,7 @@
+#ifndef DC40175_h
+#define DC40175_h
+#include "Arduino.h"
+
 class DC40175{
   /**
    * This should be a class for the
@@ -25,16 +29,44 @@ class DC40175{
    * PIN 01 - 5
    */
 public:
-  DC40175();//empty contstructor
-  void increment(int delayTime);// increment counter by setting once high and low. time in mills
+  DC40175(int _clockpin);//minmal contstructor
+  DC40175( int _clockpin,
+                  int _resetpin,
+                  int _inhibitpin,
+                  int _carryoutpin);//full contstructor
+
+  /**
+   * set one higher
+   */
+  void clock();
+  void clock(int delayTime);
+
+  /**
+   * increment counter by setting once high and low.
+   * similar to clock but you can define the time
+   * @param delayTime time in mills
+   */
+  void increment(int delayTime);
   void setHigh(); // manually set high
   void setLow(); // manully set low
   void setHL(); // set high if low set low if high
   void inhibitClock(); // stop the clock
+  void resumeClock(); // resume counting
   void reset(); // reset all
+
   int carryOut(); // incoming signal
-  int whichPin(); // which pin is active?
+  // int whichPin(); // which pin is active?
   int value; // the counted value
-  ~DC40175();//deconstructor
+
+private:
+int clockpin;
+int resetpin;
+int inhibitpin;
+int carryoutpin;
+int state;
+int minimal;
+void init(int mini);
 
 };
+
+#endif
